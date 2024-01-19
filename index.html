@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub MiguelOAlv</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="content/favicon.png"/>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv='cache-control' content='no-cache'> 
+    <meta http-equiv='expires' content='0'> 
+    <meta http-equiv='pragma' content='no-cache'>
+</head>
+
+<body>
+    <nav id="navbar" class="nav">
+        <ul>
+            <li>
+
+                <a href="#public_repositories">
+                    <span class="code">&lt;</span>
+                    Public Repositories
+                    <span class="code">&#47;&gt;</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="#contact">
+                    <span class="code">&lt;</span>
+                    Contact
+                    <span class="code">&#47;&gt;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="welcome-section">
+        <div>
+            <h1>Hello<span>,</span></h1>
+            <p id="subheading">Welcome to <span>my GitHub Site</span></p>
+        </div>
+        <div>
+            <img class="welcome-img" id="desktop-only"
+                src="https://raw.githubusercontent.com/sfoteini/responsive-web-design-freeCodeCamp/fb2b6eac8dfc8903983db91fbb491d134ba266e6/personal-portfolio/images/code-1.svg">
+            <img class="welcome-img" id="mobile-only"
+                src="https://raw.githubusercontent.com/sfoteini/responsive-web-design-freeCodeCamp/fb2b6eac8dfc8903983db91fbb491d134ba266e6/personal-portfolio/images/code-2.svg">
+        </div>
+    </section>
+
+    <section id="public_repositories">
+        <h2>My work:</h2>
+        <p>This is a list of my public repositories on <a style="color: green;" href="https://github.com/MiguelOAlv" target="_blank">GitHub</a> , this list is generated automatically using github public api.</p>
+
+        <div class="projects-grid" id="proyectos">
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>You can find me in:</p>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/miguel-ortega-alvarez-703109225/" target="_blank" class="contact-details">
+                <img src="content/linkedin.svg" alt="linkedin logo" class="contact-icon">LinkedIn
+            </a>
+            <a href="https://github.com/MiguelOAlv" target="_blank" class="contact-details">
+                <img src="content/github.svg" alt="github logo" class="contact-icon">GitHub
+            </a>
+            <a href="mailto:mickey1198@gmail.com" class="contact-details">
+                <img src="content/email.svg"alt="github logo" class="contact-icon">Correo
+            </a>
+        </div>
+    </section>
+    <script src="repos.js"></script>
+</body>
+
+</html>
