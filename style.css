@@ -14,6 +14,10 @@
     font-family: Poppins;
     color: #011640;
     overflow-x: hidden;
+    background-image: url('./content/background.PNG');
+    background-size: cover; /* O 'contain' dependiendo de cómo quieras que se muestre la imagen */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto hará que la imagen de fondo no se mueva con el scroll */
   }
   
   h1 {
@@ -30,6 +34,7 @@
   
   h2 {
     margin-bottom: 5rem;
+    color: #fff;
   }
   
   li {
@@ -37,7 +42,7 @@
   }
   
   a {
-    color: #011640;
+    color: #C0C0C8;
     text-decoration: none;
   }
   
@@ -57,7 +62,7 @@
     top: 0;
     width: 100%;
     min-height: 75px;
-    background-color: #fff;
+    background-color: rgba(36, 37, 42, 0.85);
     box-shadow: 0 1rem 1rem -1rem rgba(55, 56, 58, 0.2);
     z-index: 10;
   }
@@ -71,14 +76,23 @@
   nav li {
     padding: 0px 0.8rem;
   }
+  .nav ul li a {
+    color: #FFFFFF;
+  }
   
   nav .code {
     color: white;
     transition: color 0.3s ease-out;
   }
-  
-  nav a:hover .code {
-    color: green;
+  .nav ul li a span.code {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+  }
+  .nav ul li a:hover span.code {
+    visibility: visible;
+    opacity: 1;
+    color: #9D8ABF;
   }
   
   /* Sección Bienvenida */
@@ -102,7 +116,9 @@
       align-items: center;
     }
   }
-  
+  #welcome-section h1 {
+    color: #A8E6CF
+  }
   .welcome-img  {
     margin-top: 8rem;
     width: 580px;
@@ -129,10 +145,11 @@
     font-size: 5rem;
     font-weight: 600;
     margin: 2rem 0;
+    color: #A8E6CF;
   }
   
   #subheading span {
-    color: green;
+    color: #A8E6CF;
   }
   
   @media (max-width: 650px){
@@ -141,7 +158,6 @@
     }
   }
   
-
   /* Sección proyectos */
   
   #public_repositories {
@@ -151,6 +167,7 @@
   
   #public_repositories > p {
     margin-bottom: 5rem;
+    color: #fff;
   }
   
   .projects-grid {
@@ -172,14 +189,28 @@
     padding-bottom: 2rem;
     border: 1px solid rgba(217, 217, 217, 0.5);
     border-radius: 5px;
+    background-color: rgba(58, 42, 75, 0.85);
+    color: #E0E1E6;
   }
   
   .card:hover {
     box-shadow: 0 0 2rem -0.7rem #D9D9D9;
     border: 1px solid #D9D9D9;
+    transition: 0.3s;
   }
-  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(58, 42, 75, 0.65);
+    z-index: 1;
+  }
   .desc {
+    position: relative;
+    z-index: 2;
     padding: 2rem;
     text-align: left;
   }
@@ -189,7 +220,7 @@
   }
   
   .project-tile > a {
-    color: green;
+    color: white;
     font-weight: 200;
   }
   
@@ -228,11 +259,14 @@
   
   
   .contact-details:hover .contact-icon {
-    filter: invert(83%) sepia(39%) saturate(6798%) hue-rotate(308deg) brightness(92%) contrast(107%);
+    filter: invert(61%) sepia(15%) saturate(500%) hue-rotate(250deg) brightness(100%) contrast(90%);
+    transition:0.5s;
   }
   
   .contact-details:hover {
-    color: green;
+    color: #9D8ABF;
+    transition:0.5s;
+
   }
   
   /* Footer */
@@ -246,12 +280,12 @@
   
   .heart::before {
     content: '\2665';
-    color: green;
+    color: #9D8ABF;;
     font-size: 1.6rem;
   }
   
   footer .code {
-    color: green;
+    color: #9D8ABF;
   }
   
   /* Text Selection Color */
@@ -266,6 +300,3 @@
     color: #fff;
     background: #02A1A3;
   }
-  
-  
-  
