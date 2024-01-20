@@ -6,6 +6,7 @@
   html {
     box-sizing: border-box;
     font-size: 10px;
+    scroll-behavior: smooth;
   }
   
   body {
@@ -15,9 +16,9 @@
     color: #011640;
     overflow-x: hidden;
     background-image: url('./content/background.PNG');
-    background-size: cover; /* O 'contain' dependiendo de cómo quieras que se muestre la imagen */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Esto hará que la imagen de fondo no se mueva con el scroll */
+    background-attachment: fixed;
   }
   
   h1 {
@@ -63,6 +64,10 @@
     width: 100%;
     min-height: 75px;
     background-color: rgba(36, 37, 42, 0.85);
+    background: linear-gradient(to right, 
+                                rgba(253, 253, 253, 0.85), 
+                                rgba(68, 20, 64, 0.85), 
+                                rgba(35, 50, 95, 0.85));
     box-shadow: 0 1rem 1rem -1rem rgba(55, 56, 58, 0.2);
     z-index: 10;
   }
@@ -224,13 +229,14 @@
     font-weight: 200;
   }
   
-  /* Sección contacto 011640 */
+  /* Sección contacto */
   
   #contact {
     margin-top: 3rem;
     padding: 10rem 5rem;
     text-align: center;
-    background-color: black;
+    background-color: rgba(58, 42, 75, 0.85);
+    background: linear-gradient(to right, rgba(88, 24, 69, 0.85), rgba(21, 67, 96, 0.85));
     color: #fff;
   }
   
@@ -269,7 +275,7 @@
 
   }
   
-  /* Footer */
+  /* Footer  011640*/
   
   footer {
     text-align: center;
